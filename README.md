@@ -1,12 +1,13 @@
 # ec2-start-stop
-stop and start ec2 instance based on a tag at specific time.
+**Stop** and **Start** ec2 instances based on a tag at a specific time.
 
 There are 2 EventBridge Rules:
+
 -> Start Rule: This rule has a schedule expression configured (e.g., every morning at 8 AM) and triggers the Lambda function.
 
 -> Stop Rule: This rule has a separate schedule expression (e.g., every evening at 15 PM) and triggers the Lambda function.
 
-Data Flow:
+**Data Flow:**
 
 1. The scheduler triggers the appropriate EventBridge rule based on the configured schedule (Start or Stop).
 2. The EventBridge rule invokes the Lambda function.
