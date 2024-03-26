@@ -1,4 +1,7 @@
 # ec2-start-stop
+
+!Note:- Terraform runs in version v1.0.11
+
 **Stop** and **Start** ec2 instances based on a tag at a specific time.
 
 There are 2 EventBridge Rules:
