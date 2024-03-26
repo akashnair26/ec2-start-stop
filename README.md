@@ -15,4 +15,4 @@ There are 2 EventBridge Rules:
 4. Based on the triggering rule (identified from the event data), the Lambda function either starts or stops the retrieved instances.
 5. The Lambda function logs or prints confirmation messages about the performed action.
 
-![Blank diagram](https://github.com/akashnair26/ec2-start-stop/assets/46457464/a6656b1f-4bbd-464d-bcd6-4d14e7962a0e)
+![AWS](https://github.com/akashnair26/ec2-start-stop/assets/46457464/4e4742b0-074e-4538-921a-16c64d8812b4)
