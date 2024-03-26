@@ -10,7 +10,7 @@ There are 2 EventBridge Rules:
 **Data Flow:**
 
 1. The scheduler triggers the appropriate EventBridge rule based on the configured schedule (Start or Stop).
-2. The EventBridge rule invokes the Lambda function.
-3. The Lambda function retrieves the list of instances with the "Schedule=True" tag.
+2. The EventBridge rule invokes the **Lambda function**.
+3. The Lambda function retrieves the list of instances with the "**Schedule=True**" tag.
 4. Based on the triggering rule (identified from the event data), the Lambda function either starts or stops the retrieved instances.
 5. The Lambda function logs or prints confirmation messages about the performed action.
