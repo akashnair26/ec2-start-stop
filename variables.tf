@@ -13,6 +13,20 @@ variable "lambda_timeout" {
   default = 3
 }
 
+variable "lambda_runtime" {
+  type = string
+  default = "python3.12"
+}
+
+variable "env_key" {
+  type = string
+  # default = "Schedule"
+}
+
+variable "env_value" {
+  type = string
+  # default = "True"
+}
 variable "event_rule_name" {
   type = string
 #   default = "start-stop"

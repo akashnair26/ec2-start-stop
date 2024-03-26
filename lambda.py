@@ -1,7 +1,10 @@
 import boto3
+import os
 
 def lambda_handler(event, context):
   ec2 = boto3.client('ec2')
+  tag_name = os.environ['Key']
+  tag_value = os.environ['Value']
 
   # Handle missing operation gracefully
   operation = event.get('operation', None)
@@ -15,8 +18,8 @@ def lambda_handler(event, context):
     return {'statusCode': 400, 'body': 'Operation must be start or stop'}
 
   try:
-    # Filter instances based on the "Schedule=True" tag
-    filters = [{'Name': 'tag:Schedule', 'Values': ['True']}]
+    # Filter instances based on tags
+    filters = [{'Name': f'tag:{tag_name}', 'Values': [tag_value]}]
     response = ec2.describe_instances(Filters=filters)
 
     instance_ids = [reservation['Instances'][0]['InstanceId'] for reservation in response['Reservations']]
