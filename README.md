@@ -14,3 +14,5 @@ There are 2 EventBridge Rules:
 3. The Lambda function retrieves the list of instances with the "**Schedule=True**" tag.
 4. Based on the triggering rule (identified from the event data), the Lambda function either starts or stops the retrieved instances.
 5. The Lambda function logs or prints confirmation messages about the performed action.
+
+![Blank diagram](https://github.com/akashnair26/ec2-start-stop/assets/46457464/a6656b1f-4bbd-464d-bcd6-4d14e7962a0e)
